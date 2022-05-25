@@ -7,9 +7,11 @@ const compareTasks = (a, b) => a.done - b.done;
 const creatCheckbox = ({ done, id }) => {
   const checkboxElem = document.createElement('input');
   checkboxElem.setAttribute('type', 'checkbox');
-  checkboxElem.setAttribute('data-id', id);
   checkboxElem.checked = done;
   checkboxElem.classList.add('list__item-checkbox');
+  // checkboxElem.classList.add('list__item-checkbox');
+  // checkboxElem.setAttribute('data-id', id);
+  checkboxElem.setAttribute('data-id', id);
 
   return checkboxElem;
 };
