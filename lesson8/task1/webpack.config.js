@@ -13,7 +13,7 @@ module.exports = (env, argv) => {
         {
           test: /.s?css$/, // ? воспринимает файлы css и scss
           use: [
-            isProduction ? MiniCssExtractPlugin : 'style-loader',
+            isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
             'css-loader',
             'sass-loader',
           ],
